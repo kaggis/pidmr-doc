@@ -88,7 +88,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'pathname:///openapi/explore',
+          href: 'https://api.pidmr.argo.grnet.gr/swagger-ui/',
           label: 'Explore the API',
           position: 'left',
         },

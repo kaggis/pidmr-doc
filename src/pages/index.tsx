@@ -25,7 +25,7 @@ function HomepageHeader() {
         </Link>
         <Link
             className="button button--secondary margin-left--lg button--lg"
-            to="pathname:///openapi/explore">
+            to="https://api.pidmr.argo.grnet.gr/swagger-ui/">
             Explore the API 🧭
           </Link>
         </div>
