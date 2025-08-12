@@ -3,7 +3,7 @@ name: Deploy documentation to github pages
 
 # Define when to run action
 on:
-  # run action on push to main bhranch
+  # run action on push to devel bhranch
   push:
     branches: [ main ]
   
@@ -27,12 +27,12 @@ jobs:
     
     steps:
       - name: Checkout docusaurus repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' 
+          node-version: '22' 
           cache: 'npm'
 
       - name: Install deps
@@ -42,7 +42,7 @@ jobs:
         run: npm run build
 
       - name: Run gh action to setup pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
       - name: Upload docs
         uses: actions/upload-pages-artifact@v3
